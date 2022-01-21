@@ -8,6 +8,8 @@ public class AddingIntegers {
         num1 = scan.nextInt();
         System.out.print("Please enter another integer: ");
         num2 = scan.nextInt();
-        System.out.println(num1 + " + " + num2 + " = " + (num1 + num2));
+        scan.close();
+        System.out.println(num1 + " / " + num2 + " = " + (num1 / num2));
+        System.out.println(num1 + " % " + num2 + " = " + (num1 % num2));
     }
 }
