@@ -7,7 +7,7 @@ public class TemperatureConversion {
         double degreesF, degreesC;
         degreesF = scan.nextDouble();
         scan.close();
-        degreesC = 5/9*(degreesF - 32);
+        degreesC = 5.0/9*(degreesF - 32);
         System.out.println(degreesF + " degrees Fahrenheit is " + degreesC + " degrees Celsius.");
     }
 }
