@@ -1,79 +1,43 @@
 import java.util.Scanner;
 
-public class DecimalToBinary {
-
+class DecimalToBinary {
 	public static void main(String[] args) {
-		// Get the value from the user
-		System.out.print("Please enter an integer in the range 0...1023: ");
+        //  Integer must be less than 32
+        System.out.print("Please enter an integer in the range 0...31, inclusive: ");
 		Scanner scan = new Scanner(System.in);
-		int number = scan.nextInt();
+		int value = scan.nextInt();
 		scan.close();
-		String bitString = "";   // Start with empty string
-		
-		// Build the bit string
-		if (0 <= number && number < 1024) {
-			if (number >= 512) {
-				bitString += '1';
-			} else {
-				bitString += '0';
-			}
-			number %= 512;
-			if (number >= 256) {
-				bitString += '1';
-			} else {
-				bitString += '0';
-			}
-			number %= 256;
-			if (number >= 128) {
-				bitString += '1';
-			} else {
-				bitString += '0';
-			}
-			number %= 128;
-			if (number >= 64) {
-				bitString += '1';
-			} else {
-				bitString += '0';
-			}
-			number %= 64;
-			if (number >= 32 ) {
-				bitString += '1';
-			} else {
-				bitString += '0';
-			}
-			number %= 32;
-			if (number >= 16) {
-				bitString += '1';
-			} else {
-				bitString += '0';
-			}
-			number %= 16;
-			if (number >= 8) {
-				bitString += '1';
-			} else {
-				bitString += '0';
-			}
-			number %= 8;
-			if (number >= 4) {
-				bitString += '1';
-			} else {
-				bitString += '0';
-			}
-			number %= 4;
-			if (number >= 2) {
-				bitString += '1';
-			} else {
-				bitString += '0';
-			}
-			number %= 2;
-			if (number >= 1) {
-				bitString += '1';
-			} else {
-				bitString += '0';
-			}
-		}
-		
-		System.out.println(bitString);
-	}
-
+        // Build the binary representation of the integer if it is in range
+        String bitstring = "";
+        if ( 0 <= value && value < 32)  {
+            if (value >= 16)  {
+                bitstring += '1';
+                value %= 16;
+            } else {
+                bitstring += '0';
+            }
+            if (value >= 8)  {
+                bitstring += '1';
+                value %= 8;
+            } else {
+                bitstring += '0';
+            }
+            if (value >= 4)  {
+                bitstring += '1';
+                value %= 4;
+            } else {
+                bitstring += '0';
+            }
+            if (value >= 2)  {
+                bitstring += '1';
+                value %= 2;
+            } else {
+                bitstring += '0';
+            }
+            bitstring += Integer.toString(value);
+            System.out.println(bitstring);
+        } else {
+            System.out.println("Value not in range");
+        }
+    }
 }
