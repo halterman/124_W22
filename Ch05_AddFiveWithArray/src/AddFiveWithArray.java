@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class AddFiveWithArray {
     public static void main(String[] args) throws Exception {
-        final int NUMBER_OF_NUMBERS = 10;
+        final int NUMBER_OF_NUMBERS = 5;
         System.out.printf("Please enter %d numbers to add: ", NUMBER_OF_NUMBERS);
         Scanner scan = new Scanner(System.in);
         double sum = 0;
