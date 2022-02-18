@@ -21,7 +21,7 @@ public class ReadFromFile {
 
 
         //-----------------------------------------------------------------
-        // Version 1: Getting the input from a file
+        // Version 2: Getting the input from a file
         // int number, sum = 0;
         // Scanner s = new Scanner(new File("Data1.text"));
         // while ((number = s.nextInt()) >= 0) {
@@ -31,7 +31,7 @@ public class ReadFromFile {
         // System.out.println("The sum is " + sum);
 
         //-----------------------------------------------------------------
-        // Version 2: Getting the input from a file using a dialog
+        // Version 3: Getting the input from a file using a dialog
         int number, sum = 0;
         JFileChooser dialog = new JFileChooser();
         dialog.showOpenDialog(null);
