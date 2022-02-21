@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class AddFiveWithArray {
@@ -9,7 +10,7 @@ public class AddFiveWithArray {
         double[] numberList = new double[NUMBER_OF_NUMBERS];
         
         // Read in the numbers to add and accumulate the sum
-        for (int i = 0; i < NUMBER_OF_NUMBERS; i++) {
+        for (int i = 0; i < numberList.length; i++) {
             numberList[i] = scan.nextDouble();
             sum += numberList[i];
         }
@@ -17,9 +18,13 @@ public class AddFiveWithArray {
 
         // Print the numbers and the sum
         System.out.printf("%f", numberList[0]);
-        for (int i = 1; i < NUMBER_OF_NUMBERS; i++) {
+        for (int i = 1; i < numberList.length; i++) {
             System.out.printf(" + %f", numberList[i]);
         }
         System.out.printf(" = %f%n", sum);
+
+        System.out.println("--------------------------");
+        System.out.println(numberList);
+        System.out.println(Arrays.toString(numberList));
     }
 }
