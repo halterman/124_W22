@@ -29,5 +29,7 @@ public class Geometry {
         } else {
             System.out.println(p4 + " and " + p5 + " are different");
         }
+
+        System.out.println("p4's value is " + p4 + " and its type is " + p4.getClass().getName());
     }
 }

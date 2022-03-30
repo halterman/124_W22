@@ -15,7 +15,7 @@ public class Point {
     private static final double CLOSE_ENOUGH = 0.00001;
 
     /** Can add a javadoc comment here ... */
-    private boolean floatEquals(double num1, double num2, double tolerance) {
+    private static boolean floatEquals(double num1, double num2, double tolerance) {
         return num1 == num2 || Math.abs(num1 - num2) < tolerance;
     }
 
