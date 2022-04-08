@@ -4,4 +4,8 @@ public abstract class Shape {
      * @return the area of the {@code Rectangle} object
      */
     public abstract double area();
+
+    public String id() {
+        return "SHAPE";
+    }
 }

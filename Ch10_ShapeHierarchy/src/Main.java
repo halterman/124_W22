@@ -44,5 +44,7 @@ public class Main {
             totalArea += obj.area();
         }
         System.out.println("Total shape area is " + totalArea);
+
+        System.out.println(rect1.id());
     }
 }
